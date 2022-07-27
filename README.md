@@ -1,2 +1,3 @@
 # Petstore_repository
-repository used to save files pertaining to the pet store
+The following repository contains test casses and tets plans for a Petstore.
+
