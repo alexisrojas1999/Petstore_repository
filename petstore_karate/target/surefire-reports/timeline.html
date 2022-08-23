@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"delete[1:9]","start":710,"end":1711,"title":"delete[1:9] 18:00:00.710-18:00:01.711 Check the service DELETE method"},{"id":2,"group":1,"content":"delete[2.1:25]","start":1721,"end":2116,"title":"delete[2.1:25] 18:00:01.721-18:00:02.116 DELETE a pet with values an id in the url"},{"id":3,"group":1,"content":"delete[2.2:26]","start":2122,"end":2495,"title":"delete[2.2:26] 18:00:02.122-18:00:02.495 DELETE a pet with values an id in the url"},{"id":4,"group":1,"content":"delete[2.3:27]","start":2500,"end":2940,"title":"delete[2.3:27] 18:00:02.500-18:00:02.940 DELETE a pet with values an id in the url"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>
