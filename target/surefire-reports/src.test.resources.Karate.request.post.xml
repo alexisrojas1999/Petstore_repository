@@ -1,0 +1,10 @@
+<testsuite failures="0" name="src/test/resources/Karate/request/post.feature" skipped="0" tests="1" time="1.082174">
+  <testcase classname="src.test.resources.Karate.request.post" name="check the service POST Method" time="1.082174">
+    <system-out>* url url ................................................................. passed
+* def CreatePet = {"id": '#(id)',"category": {"id": 1,"name": '#(nameCategory)'},"name": "doggie","photoUrls": ["string"],"tags": [{"id": 1,"name": '#(tagsName)'}],"status": "available"} . passed
+Given path 'pet' .......................................................... passed
+And request CreatePet ..................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
